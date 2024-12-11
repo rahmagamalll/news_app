@@ -36,7 +36,7 @@ class AllListsViwes extends StatelessWidget {
           ),
           NewsListViewBuilder(
             category: 'general',
-          ), //NewsListView() حولتها ل سيلفير ليست علشان مينفعش مع السيلفير تو بوكس يكون ال فيو لست اكسبنديد expanded
+          ), 
         ],
       ),
     );

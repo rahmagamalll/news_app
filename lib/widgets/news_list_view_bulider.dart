@@ -15,23 +15,17 @@ class NewsListViewBuilder extends StatefulWidget {
 }
 
 class _NewsListViewBuilderState extends State<NewsListViewBuilder> {
-  // List<ArticalModel> articles = [];
-  // bool isLoading = true;
-  var future; // لو من النوع دا List<ArticalModel>  هيديني ايرور لازم تبقي var
-  // لازم يبقي فيوتشر من النوع ده Future<List<ArticalModel>>?
+
+  var future;
 
   @override
   void initState() {
     super.initState();
-    future = NewsService().getArticle(widget.category); // important
-    // generalNews();
+    future = NewsService().getArticle(widget.category);
+
   }
 
-  // Future<void> generalNews() async {
-  //   articles = await NewsService().getArticle();
-  //   isLoading = false;
-  //   setState(() {});
-  // }
+ 
 
   @override
   Widget build(BuildContext context) {
@@ -52,12 +46,6 @@ class _NewsListViewBuilderState extends State<NewsListViewBuilder> {
             );
           }
         });
-    // return isLoading
-    //     ? SliverToBoxAdapter(child: Center(child: CircularProgressIndicator()))
-    //     : articles.isNotEmpty //احتياطي
-    //         ? NewsListVeiw(articles: articles)
-    //         : SliverToBoxAdapter(
-    //             child: Text("try later..."),
-    //           );
+          
   }
 }
